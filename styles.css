@@ -1,0 +1,147 @@
+/* html root colors */
+:root {
+    --color-white: #FFFFFF;
+    --gray-white: #eeeeee;
+    --color-text: #616267;
+    --color-link: #477ca7;
+    --color-code: #f7f7f7;
+}
+
+/* set the margins and paddings to zero */
+* {
+    box-sizing: border-box;
+}
+
+/* page scrolling to be smooth and a little beautiful */
+html {
+    scroll-behavior: smooth;
+}
+
+/* color
+   font
+   line height */
+body {
+    line-height: 23px;
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+}
+
+/* navbar section */
+#navbar {
+    width: 100%;
+    height: 300px;
+    font-size: 10px;
+    margin: 20px 0;
+}
+
+/* this media is for screens bigger than 815px */
+@media only screen and (min-width: 815px) {
+
+    /* the body to be flex in row */
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* i want the navbar to be allways fixed at the left top */
+    #navbar {
+        position: fixed;
+        border-right: 3px solid #817c7c;
+        width: 300px;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+    }
+
+    /* and the main section to be scrollable at right */
+    #main-doc {
+        position: absolute;
+        margin-left: 320px;
+        margin-top: 20px;
+        margin-right: 40px;
+        top: 0;
+        right: 0;
+    }
+}
+
+
+/* a little setup for links
+ inside navbar (nav items) */
+#navbar a {
+    width: 100%;
+    padding: 10px 0px 10px 30px;
+    font-size: medium;
+    border-color: #333333;
+    border-top: 1px solid;
+    color: var(--color-text);
+}
+
+/* the items set to be scrollable
+ inside navbar */
+#navbar ul {
+    border: 1px solid var(--color-text);
+    padding: 0;
+    list-style: none;
+    margin: 30px 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 88%;
+}
+
+/* the nav header text to be centered
+ and a little big */
+.nav-header {
+    color: black;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 25px;
+    font-weight: 570;
+}
+
+/* subjects in main section be black
+ and a little big */
+section header h1 {
+    margin-left: 30px;
+    color: black;
+    font-weight: 500;
+}
+
+section p {
+    padding-left: 40px;
+    font-size: 15px;
+}
+
+section ul {
+    padding-left: 100px;
+    font-size: 15px;
+    line-height: 2.3;
+}
+
+/* cede divider with different color
+ and border radius */
+.code-div {
+    background-color: var(--color-code);
+    border-radius: 7px;
+    padding: 15px 15px;
+    margin: 0 50px;
+}
+
+/* a little margin at end of page */
+.main-section:last-of-type {
+    margin-bottom: 100px;
+}
+
+.main-section:first-of-type {
+    margin-top: 40px;
+}
+
+/* links inside nav
+    to be like text with no underline
+    and blocked */
+.nav-link {
+    display: block;
+    text-decoration: none;
+}
